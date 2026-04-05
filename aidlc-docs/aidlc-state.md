@@ -1,0 +1,40 @@
+# AI-DLC State Tracking
+
+## Project Information
+- **Project Name**: 테이블오더 서비스
+- **Project Type**: Greenfield
+- **Start Date**: 2026-04-01T00:00:00Z
+- **Current Stage**: CONSTRUCTION - Unit 1: Foundation - Code Generation (Complete)
+
+## Workspace State
+- **Existing Code**: No
+- **Reverse Engineering Needed**: No
+- **Workspace Root**: /home/ec2-user/environment/aidlc-table-order
+
+## Code Location Rules
+- **Application Code**: Workspace root (NEVER in aidlc-docs/)
+- **Documentation**: aidlc-docs/ only
+- **Structure patterns**: See code-generation.md Critical Rules
+
+## Extension Configuration
+| Extension | Enabled | Decided At |
+|---|---|---|
+| Security Baseline | No | Requirements Analysis |
+
+## Stage Progress
+
+### INCEPTION PHASE
+- [x] Workspace Detection
+- [x] Requirements Analysis
+- [x] User Stories
+- [x] Workflow Planning
+- [x] Application Design - COMPLETED
+- [x] Units Generation - COMPLETED
+
+### CONSTRUCTION PHASE
+- [ ] Functional Design - EXECUTE (per-unit)
+- [ ] NFR Requirements - EXECUTE (per-unit)
+- [ ] NFR Design - EXECUTE (per-unit)
+- [ ] Infrastructure Design - EXECUTE (per-unit)
+- [ ] Code Generation - EXECUTE (per-unit)
+- [ ] Build and Test - EXECUTE
