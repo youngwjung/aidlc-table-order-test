@@ -277,3 +277,68 @@ AI-DLC 워크플로우를 시작해봅시다."
 **Context**: CONSTRUCTION - Unit 1: Foundation - Code Generation, Part 2 Steps 10-13
 
 ---
+
+## Session Continuity - Unit 2 Start
+**Timestamp**: 2026-04-05T01:00:00Z
+**User Input**: "Unit 2 개발 시작"
+**AI Response**: Session resumed. Project: 테이블오더 서비스. Current stage: CONSTRUCTION - Unit 1 Complete. Next: Unit 2 (Menu & Category Management) - Functional Design. Loaded artifacts: aidlc-state.md, unit-of-work.md, unit-of-work-story-map.md, unit-of-work-dependency.md, execution-plan.md, stories.md, application-design (components, services, component-methods), Unit 1 functional design artifacts (domain-entities, business-rules, business-logic-model, frontend-components), existing code (models, schemas).
+**Context**: Session Continuity - Resuming CONSTRUCTION phase for Unit 2
+
+---
+
+## Unit 2 Functional Design - Plan and Questions Created
+**Timestamp**: 2026-04-05T01:01:00Z
+**AI Response**: Created functional design plan at aidlc-docs/construction/plans/unit-2-menu-category-functional-design-plan.md (4 parts, 21 steps). Created 10 questions at aidlc-docs/construction/unit-2-menu-category-functional-design-questions.md covering: category deletion policy, image upload specs, image optimization, reorder UI, customer menu navigation, cart button placement, admin menu layout, menu form display, is_available toggle, category edit mode.
+**Context**: CONSTRUCTION - Unit 2: Menu & Category - Functional Design, Steps 2-4
+
+---
+
+## Unit 2 Functional Design - Auto-Selected Answers
+**Timestamp**: 2026-04-05T01:02:00Z
+**User Input**: "앞으로 진행되는 모든 단계에 대해서 질문을 생성한 다음 가장 추천되는 옵션을 알아서 선택한 다음 진행해 줄수 있어?"
+**AI Response**: User requested auto-selection mode. Selected: Q1:A(삭제차단), Q2:B(JPEG/PNG/WebP 5MB), Q3:A(리사이징없음), Q4:B(화살표버튼), Q5:B(탭+필터링), Q6:A(카드+모달담기), Q7:C(카테고리필터+테이블), Q8:B(모달), Q9:A(불필요), Q10:A(인라인편집). Proceeding to generate functional design artifacts.
+**Context**: CONSTRUCTION - Unit 2: Menu & Category - Functional Design, Step 5
+
+---
+
+## Unit 2 Functional Design - Artifacts Generated
+**Timestamp**: 2026-04-05T01:03:00Z
+**AI Response**: Generated 4 functional design artifacts: business-logic-model.md (category CRUD, menu CRUD, image management, customer menu flow, error handling), business-rules.md (BR-CAT01~04, BR-MENU01~07, BR-IMG01~07, BR-FV01~03), domain-entities.md (Category/Menu entity confirmation, image file model), frontend-components.md (CustomerMenuPage, CategoryTabs, MenuCard, MenuDetailModal, AdminCategoryManagementPage, AdminMenuManagementPage, MenuFormModal, ImageUploader). All 21 plan steps marked complete. Auto-approved per user request.
+**Context**: CONSTRUCTION - Unit 2: Menu & Category - Functional Design, Steps 6-9
+
+---
+
+## Unit 2 NFR Requirements - Complete
+**Timestamp**: 2026-04-05T01:04:00Z
+**AI Response**: Generated NFR requirements (nfr-requirements.md, tech-stack-decisions.md). Key decisions: image upload 3s SLA, 5MB limit, JPEG/PNG/WebP whitelist, UUID naming, StaticFiles serving, no image resize. No new dependencies needed. Auto-approved.
+**Context**: CONSTRUCTION - Unit 2: Menu & Category - NFR Requirements, Steps 1-9
+
+---
+
+## Unit 2 NFR Design - Complete
+**Timestamp**: 2026-04-05T01:05:00Z
+**AI Response**: Generated NFR design patterns (nfr-design-patterns.md: upload security, static file serving, dual validation, layered error handling, role-based access) and logical components (logical-components.md: ImageService, CategoryService, MenuService, API routers, frontend utilities). Auto-approved.
+**Context**: CONSTRUCTION - Unit 2: Menu & Category - NFR Design, Steps 1-9
+
+---
+
+## Unit 2 Infrastructure Design - Complete
+**Timestamp**: 2026-04-05T01:06:00Z
+**AI Response**: Generated infrastructure design (infrastructure-design.md, deployment-architecture.md). No infrastructure changes needed - Unit 1 Docker Compose config with uploads volume already supports Unit 2. Only code additions required. Auto-approved.
+**Context**: CONSTRUCTION - Unit 2: Menu & Category - Infrastructure Design, Steps 1-9
+
+---
+
+## Unit 2 Code Generation - Plan Created and Auto-Approved
+**Timestamp**: 2026-04-05T01:07:00Z
+**AI Response**: Created code generation plan with 16 steps (6 backend, 9 frontend, 1 documentation). 17 stories mapped to steps. Auto-approved per user request.
+**Context**: CONSTRUCTION - Unit 2: Menu & Category - Code Generation, Part 1 Steps 1-9
+
+---
+
+## Unit 2 Code Generation - Complete
+**Timestamp**: 2026-04-05T01:08:00Z
+**AI Response**: Code generation complete. 16 files changed: 14 created + 2 modified. Backend: image_service.py, category_service.py, menu_service.py, categories.py router, menus.py router, main.py (modified). Frontend: format-utils.ts, image-uploader.tsx, category-tabs.tsx, menu-card.tsx, menu-detail-modal.tsx, menu-form-modal.tsx, admin/categories/page.tsx, admin/menus/page.tsx, customer/menu/page.tsx (modified). All 17 stories (CS-02~04, CS-ERR-03, AD-12~22, AD-ERR-04~05) implemented. Auto-approved.
+**Context**: CONSTRUCTION - Unit 2: Menu & Category - Code Generation, Part 2 Steps 10-16
+
+---
