@@ -8,7 +8,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.config import BACKEND_CORS_ORIGINS, UPLOAD_DIR
 from app.database import engine, async_session_maker
 from app.models import Base
-from app.routers import auth, stores, categories, menus, orders
+from app.routers import auth, stores, categories, menus, tables, orders, sse
 
 
 @asynccontextmanager
@@ -35,7 +35,9 @@ app.include_router(auth.router)
 app.include_router(stores.router)
 app.include_router(categories.router)
 app.include_router(menus.router)
+app.include_router(tables.router)
 app.include_router(orders.router)
+app.include_router(sse.router)
 
 
 @app.get("/health")

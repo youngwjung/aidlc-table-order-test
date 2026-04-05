@@ -4,7 +4,7 @@
 - **Project Name**: 테이블오더 서비스
 - **Project Type**: Greenfield
 - **Start Date**: 2026-04-01T00:00:00Z
-- **Current Stage**: CONSTRUCTION - Unit 2 & Unit 3 Complete
+- **Current Stage**: CONSTRUCTION - Unit 2, Unit 3, Unit 4 Complete
 
 ## Workspace State
 - **Existing Code**: No
@@ -48,6 +48,13 @@
 - [x] Code Generation
 
 #### Unit 3: Customer Order Flow (Complete)
+- [x] Functional Design
+- [x] NFR Requirements
+- [x] NFR Design
+- [x] Infrastructure Design
+- [x] Code Generation
+
+#### Unit 4: Admin Dashboard & Table Management (Complete)
 - [x] Functional Design
 - [x] NFR Requirements
 - [x] NFR Design
