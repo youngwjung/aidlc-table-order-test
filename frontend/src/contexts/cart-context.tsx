@@ -28,10 +28,12 @@ function cartReducer(state: CartState, action: CartAction): CartState {
       const existing = state.items.find((i) => i.menuId === action.payload.menuId);
       if (existing) {
         items = state.items.map((i) =>
-          i.menuId === action.payload.menuId ? { ...i, quantity: i.quantity + 1 } : i
+          i.menuId === action.payload.menuId
+            ? { ...i, quantity: Math.min(i.quantity + (action.payload.quantity || 1), 99) }
+            : i
         );
       } else {
-        items = [...state.items, { ...action.payload, quantity: 1 }];
+        items = [...state.items, { ...action.payload, quantity: action.payload.quantity || 1 }];
       }
       return { items, totalAmount: calcTotal(items) };
     }
@@ -42,8 +44,9 @@ function cartReducer(state: CartState, action: CartAction): CartState {
       if (action.payload.quantity <= 0) {
         items = state.items.filter((i) => i.menuId !== action.payload.menuId);
       } else {
+        const clamped = Math.min(action.payload.quantity, 99);
         items = state.items.map((i) =>
-          i.menuId === action.payload.menuId ? { ...i, quantity: action.payload.quantity } : i
+          i.menuId === action.payload.menuId ? { ...i, quantity: clamped } : i
         );
       }
       return { items, totalAmount: calcTotal(items) };

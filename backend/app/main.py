@@ -8,7 +8,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.config import BACKEND_CORS_ORIGINS, UPLOAD_DIR
 from app.database import engine, async_session_maker
 from app.models import Base
-from app.routers import auth, stores
+from app.routers import auth, stores, orders
 
 
 @asynccontextmanager
@@ -33,6 +33,7 @@ app.mount("/uploads", StaticFiles(directory=UPLOAD_DIR), name="uploads")
 
 app.include_router(auth.router)
 app.include_router(stores.router)
+app.include_router(orders.router)
 
 
 @app.get("/health")
