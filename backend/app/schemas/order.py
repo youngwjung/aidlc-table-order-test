@@ -42,6 +42,21 @@ class OrderStatusUpdate(BaseModel):
     status: str = Field(..., pattern=r"^(pending|preparing|completed)$")
 
 
+class OrderCreateRequestItem(BaseModel):
+    menu_id: int
+    quantity: int = Field(..., ge=1, le=99)
+
+
+class OrderCreateRequest(BaseModel):
+    table_id: int
+    items: list[OrderCreateRequestItem] = Field(..., min_length=1)
+
+
+class CurrentSessionOrdersResponse(BaseModel):
+    orders: list[OrderResponse] = []
+    session_total: int = 0
+
+
 class OrderHistoryItemResponse(BaseModel):
     id: int
     menu_name: str

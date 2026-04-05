@@ -342,3 +342,68 @@ AI-DLC 워크플로우를 시작해봅시다."
 **Context**: CONSTRUCTION - Unit 2: Menu & Category - Code Generation, Part 2 Steps 10-16
 
 ---
+
+## Session Resumption - Unit 3 Start
+**Timestamp**: 2026-04-05T01:00:00Z
+**User Input**: "Unit3 개발 시작"
+**AI Response**: Session resumed. Detected existing AI-DLC project. Current state: Unit 1 Foundation complete. Proceeding to Unit 3: Customer Order Flow - Functional Design stage.
+**Context**: Session continuity - resuming CONSTRUCTION PHASE for Unit 3
+
+---
+
+## Unit 3 Functional Design - Plan & Questions Created
+**Timestamp**: 2026-04-05T01:01:00Z
+**AI Response**: Created unit-3-order-functional-design-plan.md with 9-step execution checklist and 7 clarification questions covering: cart item display info, order confirmation UI, multiple orders per session, redirect target, order history scope, quantity adjustment method, and server-side menu validation.
+**Context**: CONSTRUCTION - Unit 3: Customer Order Flow - Functional Design, Steps 2-4
+
+---
+
+## Unit 3 Functional Design - Auto-Select & User Preference
+**Timestamp**: 2026-04-05T01:02:00Z
+**User Input**: "앞으로 진행되는 모든 단계에 대해서 질문을 생성한 다음 가장 추천되는 옵션을 알아서 선택한 다음 진행해 줄수 있어?"
+**AI Response**: User preference recorded. Auto-selected recommended options: Q1=B (name+price+qty+image), Q2=A (confirm modal), Q3=A (multiple orders allowed), Q4=A (redirect to menu), Q5=A (current session only), Q6=C (+/- buttons, auto-delete at 0), Q7=A (server validation). Proceeding with artifact generation.
+**Context**: CONSTRUCTION - Unit 3: Customer Order Flow - Functional Design, Steps 5-6
+
+---
+
+## Unit 3 Functional Design - Artifacts Generated
+**Timestamp**: 2026-04-05T01:03:00Z
+**AI Response**: Generated 4 functional design artifacts: domain-entities.md (server-side Order/OrderItem/Table/Menu + client-side CartItem/Cart), business-rules.md (22 rules in 5 categories: cart BR-C01~C08, order BR-O01~O06, session BR-SS01~SS03, success BR-OS01~OS02, error BR-E01~E03), business-logic-model.md (cart CRUD, order creation with server validation, session auto-start, order history query, API endpoints), frontend-components.md (cartContext, 3 pages, 5 UI components, navigation flow).
+**Context**: CONSTRUCTION - Unit 3: Customer Order Flow - Functional Design, Steps 6-7. Auto-approved per user preference.
+
+---
+
+## Unit 3 NFR Requirements - Auto-Selected & Generated
+**Timestamp**: 2026-04-05T01:04:00Z
+**AI Response**: Auto-selected: Q1=A (no cart item limit), Q2=A (10s timeout), Q3=A (client-side only duplicate prevention). Generated nfr-requirements.md (7 categories: performance, scalability, reliability, security, usability, data management, testing) and tech-stack-decisions.md (inherits Unit 1 stack, adds localStorage persistence, seed data strategy).
+**Context**: CONSTRUCTION - Unit 3: Customer Order Flow - NFR Requirements, Steps 3-6. Auto-approved.
+
+---
+
+## Unit 3 NFR Design - Auto-Selected & Generated
+**Timestamp**: 2026-04-05T01:05:00Z
+**AI Response**: Auto-selected: Q1=A (no debouncing for localStorage), Q2=A (single transaction for session+order). Generated nfr-design-patterns.md (4 pattern categories: client state management, server-side, UI, error handling) and logical-components.md (architecture diagram, 9 frontend components, 3 backend components, 4 data layer models).
+**Context**: CONSTRUCTION - Unit 3: Customer Order Flow - NFR Design, Steps 3-6. Auto-approved.
+
+---
+
+## Unit 3 Infrastructure Design - Auto-Selected & Generated
+**Timestamp**: 2026-04-05T01:06:00Z
+**AI Response**: Auto-selected: Q1=A (manual seed execution via docker exec). Generated infrastructure-design.md (no new infra, code additions only, DB index recommendations) and deployment-architecture.md (file structure additions, seed data guide, dev workflow).
+**Context**: CONSTRUCTION - Unit 3: Customer Order Flow - Infrastructure Design, Steps 3-6. Auto-approved.
+
+---
+
+## Unit 3 Code Generation - Plan Created & Auto-Approved
+**Timestamp**: 2026-04-05T01:07:00Z
+**AI Response**: Created unit-3-order-code-generation-plan.md with 13 steps. Auto-approved per user preference.
+**Context**: CONSTRUCTION - Unit 3: Customer Order Flow - Code Generation, Part 1
+
+---
+
+## Unit 3 Code Generation - Complete
+**Timestamp**: 2026-04-05T01:08:00Z
+**AI Response**: Code generation complete. 10 new files created, 3 files modified. Backend: OrderService (create_order, get_current_session_orders), order_router (POST/GET), seed_data.py (3 categories, 9 menus), schema updates (OrderCreateRequest, CurrentSessionOrdersResponse), main.py router registration. Frontend: 3 pages (cart, order-success, orders), 3 components (cart-item, cart-summary, order-card), cart-context enhancement (qty limits). All 11 stories implemented (CS-05~CS-13, CS-ERR-02, CS-ERR-04).
+**Context**: CONSTRUCTION - Unit 3: Customer Order Flow - Code Generation, Part 2. All 13 steps completed. Auto-approved.
+
+---
