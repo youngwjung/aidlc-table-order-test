@@ -4,7 +4,7 @@
 - **Project Name**: 테이블오더 서비스
 - **Project Type**: Greenfield
 - **Start Date**: 2026-04-01T00:00:00Z
-- **Current Stage**: CONSTRUCTION - Unit 1: Foundation - Code Generation (Complete)
+- **Current Stage**: CONSTRUCTION - Unit 4: Admin Dashboard & Table Management - Code Generation (Complete)
 
 ## Workspace State
 - **Existing Code**: No
